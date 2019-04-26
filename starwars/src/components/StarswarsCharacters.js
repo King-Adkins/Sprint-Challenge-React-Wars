@@ -5,8 +5,9 @@ const StarwarsCharacters = (props) => {
     let characterData = [props.data];
     return (
         <div>
-            {characterData.map}
-            <StarwarsCharacter />
+            {props.data.map(item => 
+            <StarwarsCharacter characterData = {item} />
+            )};
         </div>
     );
 };
