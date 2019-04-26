@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import StarwarsCharacter from './components/StarswarsCharacters'
+import List from './components/List';
 
 class App extends Component {
   constructor() {
@@ -29,15 +29,23 @@ class App extends Component {
         throw new Error(err);
       });
   };
-
+ 
+  
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
-        <p><StarwarsCharacter data = {this.state.starwarsChars} /></p>
+        <div>
+          <h1 className="Header">React Wars</h1>
+        </div>
+        <div>
+          <p>
+            <List characters = {this.state.starwarsChars} />
+          </p>
+        </div>
       </div>
-    );
+  );
   }
 }
+
 
 export default App;
